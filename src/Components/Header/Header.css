@@ -1,0 +1,13 @@
+.header-wrapper{
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid skyblue;
+    padding: 5px;
+}
+
+.header-greeting{
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
