@@ -40,7 +40,7 @@ export const Body = () => {
         <React.Fragment>
             <div className="body-wrapper">
                 <div className="sidepane-div">
-                    <Link className="no-style-link" to="#" target="_blank">
+                    <Link className="no-style-link" to="https://drive.google.com/file/d/1SPYP8m8RXGvGNSIVToDLtM2eJrnjqOt3/view?usp=sharing" target="_blank">
                         <div className="sidepane-menuItem">
                                 Resume
                         </div>
