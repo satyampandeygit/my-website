@@ -5,6 +5,8 @@ export const Body = () => {
 
     const [repos, setRepos] = useState([]);
 
+    const showTheseRepos = ['Bill-App', 'bill-app-backend', 'Minsweeper-Project', 'my-website', 'namaste-react', 'xharktank']
+
     async function fetchRepoDetails(){
 
         let requiredData = [];
@@ -16,7 +18,7 @@ export const Body = () => {
         console.log(repoData)
 
         repoData.forEach(repo => {
-            if(repo.private===false && repo.fork===false ){
+            if(repo.private===false && repo.fork===false && repo.language && showTheseRepos.includes(repo.name)){
                 let newObject = {
                     name: repo?.name,
                     url: repo?.html_url,
@@ -39,39 +41,13 @@ export const Body = () => {
     return (
         <React.Fragment>
             <div className="body-wrapper">
-                <div className="sidepane-div">
-                    <Link className="no-style-link" to="https://drive.google.com/file/d/1SPYP8m8RXGvGNSIVToDLtM2eJrnjqOt3/view?usp=sharing" target="_blank">
-                        <div className="sidepane-menuItem">
-                                Resume
-                        </div>
-                    </Link>
-
-                    <Link className="no-style-link" to="https://www.github.com/satyampandeygit" target="_blank">
-                        <div className="sidepane-menuItem">
-                            GitHub
-                        </div>
-                    </Link>
-
-                    <Link className="no-style-link" to="https://www.linkedin.com/in/satyampandeynitrr" target="_blank">
-                        <div className="sidepane-menuItem">
-                        
-                            LinkedIn
-                        </div>
-                    </Link>
-
-                    <Link className="no-style-link" to="https://twitter.com/SatyamP38550221" target="_blank">
-                        <div className="sidepane-menuItem">
-                        
-                            Twitter
-                        </div>
-                    </Link>
-                </div>
 
                 <div className="satyam-content-wrapper">
 
                     <div className="satyam-content">
-                        Hey! Little bit about me...
+                        
                         <div className="satyam-description">
+                            Hey! Little bit about me...<br></br>
                             I am Software Developer with total experience of close to 2 Years. 
                             I am currently working at Optum(UHG) from past 18 months. 
                             I have done my graduation in Electrical Engieering from NIT Raipur.
@@ -94,7 +70,6 @@ export const Body = () => {
                             {
                                 repos.length > 0 ?
                                 (repos.map((repo,index)=>{
-                                    if(repo.language){
                                         return(
                                             <div key={index+1} className="repo-card">
                                                 <div className="repo-card-header">
@@ -104,22 +79,25 @@ export const Body = () => {
 
 
                                                 <div 
-                                                    className="repo-card-description"
-                                                    onClick={()=>{
-                                                        window.open(repo.url,'_blank');
-                                                    }}
+                                                    className="repo-card-details"
                                                     style={{
                                                         marginTop: '10px',
-                                                        cursor: 'pointer'
                                                     }}
                                                 >
-                                                    {repo.description? repo.description : 'Add Project description'}
-                                                    <br/><br/>  
-                                                    GitHub Repository 
+                                                    <div className="repo-description">
+                                                        {repo.description? repo.description : 'Add Project description'}
+                                                    </div>
+                                                    <div 
+                                                        className="project-repo-link" 
+                                                        onClick={()=>{
+                                                            window.open(repo.url,'_blank');
+                                                        }}
+                                                    > 
+                                                        <i className="fa-brands fa-github-square fa-lg"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         )
-                                    }
                                 })
                                 ) : 'Satyam Projects'
                             }

@@ -1,8 +1,10 @@
 .header-wrapper{
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-bottom: 2px solid skyblue;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-greeting{
@@ -10,4 +12,96 @@
     font-size: 20px;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.bar-button{
+    display: none;
+}
+
+/* Hide Menu items on the basis of screen size */
+
+@media screen and (max-width: 768px){
+    .header-menu > .no-style-link{
+        display: none;
+    }
+
+    .header-menu > .contact-button-div{
+        display: none;
+    }
+
+    .header-menu > .bar-button{
+        display: block;
+    }
+}
+
+button{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn{
+    font-size: medium!important;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.contact-btn:hover{
+    background-color: #dacbcb;
+}
+
+.modal-wrapper{
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 150px;
+}
+
+.modal-header-menu{
+    display: none;
+}
+
+.modal-header{
+    margin: 5px;
+    padding: 2px 5px;
+}
+
+.email-detail{
+    margin: 5px;
+    display: flex;
+    padding: 2px 5px;
+    width: max-content;
+    align-items: center;
+}
+
+.email{
+    padding: 2px 5px;
+}
+
+.copy-email-btn{
+    margin-left: 5px;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copy-email-success-notify{
+    display: none;
+    color: green;
+    padding: 2px 5px;
+}
+
+.social-icons{
+    padding: 2px 5px;
+    margin: 10px 5px 2px 5px;
+    display: flex;
+    align-items: center;
 }
