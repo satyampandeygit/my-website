@@ -3,6 +3,14 @@ import { Header } from "./Components/Header";
 import { Body } from "./Components/Body";
 import { BrowserRouter } from "react-router-dom";
 import RepoContext from "./Utils/RepoContext";
+import { MainContent } from "./Components/MainContent/MainContent";
+
+
+// Import the Bootstrap CSS
+import '../assets/bootstrap-css/bootstrap.min.css';
+
+// Import individual components css
+import './Components/MainContent/MainContent.css';
 
 export const App = () => {
 
@@ -48,7 +56,8 @@ export const App = () => {
                         height: '1000px',
                     }}>
                         <Header/>
-                        <Body/>
+                        {/* <Body/> */}
+                        <MainContent/>
                     </div>
                 </RepoContext.Provider>
             </BrowserRouter>

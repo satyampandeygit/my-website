@@ -1,7 +1,7 @@
 .body-wrapper{
-    width: 80%;
+    width: 100%;
     margin: 2px auto;
-    min-height: 800px;
+    min-height: 400px;
 }
 
 .no-style-link{
@@ -34,16 +34,15 @@
 }
 
 .satyam-content-wrapper{
-    padding: 5px;
+    padding: 2px;
 }
 
 .satyam-content{
-    margin-left: 20px;
-    margin-top: 20px;
+    margin: 2px;
 }
 
 .satyam-description{
-    padding-top: 5px;
+    padding-top: 10px;
     text-align: justify ;
 
     font-style: italic;
