@@ -1,7 +1,7 @@
 .body-wrapper{
-    width: 80%;
+    width: 100%;
     margin: 2px auto;
-    min-height: 800px;
+    min-height: 400px;
 }
 
 .no-style-link{
@@ -34,24 +34,27 @@
 }
 
 .satyam-content-wrapper{
-    padding: 5px;
+    padding: 2px;
 }
 
 .satyam-content{
-    margin-left: 20px;
-    margin-top: 20px;
+    margin: 2px;
+    padding-left: 10px;
+    /* border-left: 1px solid #dacbcb; */
 }
 
 .satyam-description{
-    padding-top: 5px;
-    text-align: justify ;
+    padding-top: 20px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
 
+.satyam-description-headline{
+    margin-bottom: 10px;
     font-style: italic;
 }
 
 .satyam-projects-container{
-    
-    margin: auto    ;
     padding: 5px;
     /* border: 2px solid black;     */
     display: flex;
@@ -59,7 +62,6 @@
 }
 
 .repo-card{
-    width: 300px;
     min-height: 30px;
     padding: 5px;
     margin: 5px;
@@ -67,9 +69,35 @@
     border-radius: 8px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (width<=600px){
     .repo-card{
-        width: 200px;
+        width: 100%;
+    }
+
+    .satyam-projects-container{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px){
+    .repo-card{
+        width: 80%;
+    }
+
+    .satyam-projects-container{
+        margin: auto;
+        width: 60%;
+    }
+}
+
+@media screen and (width> 992px){
+    .repo-card{
+        width: 250px;
+    }
+
+    .satyam-projects-container{
+        width: 100%;
     }
 }
 
@@ -77,20 +105,23 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    padding-right: 20px;
     padding-left: 5px;
 }
 
-.repo-card-details{
+.repo-header-content{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.repo-card-details{
 }
 
 .repo-description{
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .project-repo-link{
-    margin-right: 20px;
+    margin: 1px 5px;
     cursor: pointer;
 }
