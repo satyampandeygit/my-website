@@ -8,13 +8,13 @@ export const Modal = ({
     return (
         <React.Fragment>
             <div id={modalId} className="modal-div">
-                <div className="modal-content">
+                <div className="modal-content-self">
                     <span onClick={()=>{
                         const modalDiv = document.getElementById("contact-modal");
-                        modalDiv.style.display = "none";
+                        modalDiv.style.visibility = "hidden";
                         
                         const emailNotifyDiv = document.getElementById("email-notify-div");
-                        emailNotifyDiv.style.display = "none";
+                        emailNotifyDiv.style.visibility = "hidden";
                     }} className="close">&times;</span><br/>
                     { modalContent }
                 </div>

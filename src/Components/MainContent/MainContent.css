@@ -16,9 +16,18 @@
     border-radius: 16px;
 }
 
-@media screen and (max-width:768px){
+@media screen and (width<=768px){
     .profile-photo-wrapper{
-        width: 40%;
+        width: 80%;
+    }
+
+    #left-body{
+        padding: 5px;
+    }
+
+    #right-body{
+        padding: 5px;
+        margin: 2px;
     }
 }
 

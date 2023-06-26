@@ -58,14 +58,9 @@ button{
 }
 
 .modal-wrapper{
-    border: 1px solid black;
+    /* border: 1px solid black;
     margin-top: 10px;
-    margin-right: 20px;
-    height: 150px;
-}
-
-.modal-header-menu{
-    display: none;
+    margin-right: 20px; */
 }
 
 .modal-header{
@@ -81,8 +76,8 @@ button{
     align-items: center;
 }
 
-.email{
-    padding: 2px 5px;
+#email{
+    padding-left: 2px;
 }
 
 .copy-email-btn{
@@ -93,8 +88,9 @@ button{
     cursor: pointer;
 }
 
-.copy-email-success-notify{
-    display: none;
+#email-notify-div{
+    text-align: center;
+    visibility: hidden;
     color: green;
     padding: 2px 5px;
 }

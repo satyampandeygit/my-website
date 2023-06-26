@@ -17,7 +17,7 @@ const ModalContent = () => {
 
             <div className="modal-wrapper">
 
-                <div className="modal-header-menu">
+                {/* <div className="modal-header-menu">
                     <Link className="no-style-link" to="https://drive.google.com/file/d/1SPYP8m8RXGvGNSIVToDLtM2eJrnjqOt3/view?usp=sharing" target="_blank">
                         <div className="sidepane-menuItem">
                             <i className="menu-icon fa-lg fa-regular fa-file"></i>
@@ -26,7 +26,9 @@ const ModalContent = () => {
                             </div>
                         </div>
                     </Link>
-                </div>
+                </div> */}
+
+                <div id="email-notify-div">Email Copied!</div>
 
                 <div className="modal-header">
                     Contact me via
@@ -41,16 +43,13 @@ const ModalContent = () => {
                         navigator.clipboard.writeText(copiedEmail.innerHTML);
                         
                         const emailNotifyDiv = document.getElementById("email-notify-div");
-                        if(emailNotifyDiv.style.display === "none"){
-                            emailNotifyDiv.style.display = "block";
+                        if(emailNotifyDiv.style.visibility === "hidden"){
+                            emailNotifyDiv.style.visibility = "visible";
                         }
                         setTimeout(()=>{
-                            emailNotifyDiv.style.display = "none";
+                            emailNotifyDiv.style.visibility = "hidden";
                         },3000);
                     }}>Copy</div>
-
-                    <div id="email-notify-div" className="copy-email-success-notify">Email Copied!</div>
-                    
                 </div>
             </div>
         </React.Fragment>
@@ -62,7 +61,7 @@ export const MainContent = () => {
         <React.Fragment>
             <Container fluid="md">
                 <Row>
-                    <Col md="12" lg="4">
+                    <Col md="12" lg="4" >
                         <div id="left-body">
                             <div className="profile-photo-wrapper">
                                 <img className="profile-photo" src={profilePhoto} alt=""/>
@@ -101,7 +100,7 @@ export const MainContent = () => {
                                         type="submit" 
                                         onClick={()=>{
                                             const modalDiv = document.getElementById("contact-modal");
-                                            modalDiv.style.display = "block";
+                                            modalDiv.style.visibility = "visible";
                                         }}>
                                             Contact me
                                         </button>

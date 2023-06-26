@@ -15,10 +15,12 @@ export const Body = () => {
                         <div className="satyam-content">
                             
                             <div className="satyam-description">
-                                Hey! Little bit about me...<br></br>
-                                I am Software Developer with total experience of close to 2 Years. 
-                                I am currently working at Optum(UHG) from past 18 months. 
-                                I have done my graduation in Electrical Engieering from NIT Raipur.
+                                
+                                <div className="satyam-description-headline">
+                                    I am Software Developer with total experience of close to 2 Years. 
+                                    I am currently working at Optum(UHG) from past 18 months. 
+                                    I have done my graduation in Electrical Engieering from NIT Raipur.
+                                </div>
 
                                 <div style={{
                                     marginTop: '5px'
@@ -42,7 +44,17 @@ export const Body = () => {
                                                 <div key={index+1} className="repo-card">
                                                     <div className="repo-card-header">
                                                         <b>{repo.name}</b>
-                                                        <span>{repo.language}</span>
+                                                        <div className="repo-header-content">
+                                                            <div>{repo.language}</div>
+                                                            <div 
+                                                                className="project-repo-link" 
+                                                                onClick={()=>{
+                                                                    window.open(repo.url,'_blank');
+                                                                }}
+                                                            > 
+                                                                <i className="fa-brands fa-github-square fa-lg"></i>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
 
@@ -55,14 +67,7 @@ export const Body = () => {
                                                         <div className="repo-description">
                                                             {repo.description? repo.description : 'Add Project description'}
                                                         </div>
-                                                        <div 
-                                                            className="project-repo-link" 
-                                                            onClick={()=>{
-                                                                window.open(repo.url,'_blank');
-                                                            }}
-                                                        > 
-                                                            <i className="fa-brands fa-github-square fa-lg"></i>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                             )
