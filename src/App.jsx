@@ -16,7 +16,7 @@ export const App = () => {
 
     const [repos, setRepos] = useState([]);
 
-    const showTheseRepos = ['Bill-App', 'bill-app-backend', 'Minsweeper-Project', 'my-website', 'namaste-react', 'xharktank']
+    const showTheseRepos = ['Bill-App', 'bill-app-backend', 'Minsweeper-Project', 'my-website', 'namaste-react', 'xharktank', 'namaste-youtube']
 
     async function fetchRepoDetails(){
 
